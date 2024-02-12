@@ -31,23 +31,23 @@ int main() {
     wydrukuj_tablice(t, SIZE);
 
     int tt[SIZE] = {};
-    int k_exist_in_tt = 42;  // liczba jaka chce
-    int k_not_exist_in_tt = 99;  // liczba jaka chce
+    int k_istnieje_w_tt = 42;  // liczba jaka chce
+    int k_nie_istnieje_w_tt = 99;  // liczba jaka chce
 
-    std::cout << wyszukiwanie_binarne(tt, SIZE, k_exist_in_tt) << std::endl;
-    std::cout << wyszukiwanie_binarne(tt, SIZE, k_not_exist_in_tt) << std::endl;
+    std::cout << wyszukiwanie_binarne(tt, SIZE, k_istnieje_w_tt) << std::endl;
+    std::cout << wyszukiwanie_binarne(tt, SIZE, k_nie_istnieje_w_tt) << std::endl;
 
-    std::cout << wyszukiwanie_liniowe(tt, SIZE, k_exist_in_tt) << std::endl;
-    std::cout << wyszukiwanie_liniowe(tt, SIZE, k_not_exist_in_tt) << std::endl;
+    std::cout << wyszukiwanie_liniowe(tt, SIZE, k_istnieje_w_tt) << std::endl;
+    std::cout << wyszukiwanie_liniowe(tt, SIZE, k_nie_istnieje_w_tt) << std::endl;
 
-    std::cout << wyszukiwanie_liniowe_z_wart(tt, SIZE, k_exist_in_tt) << std::endl;
-    std::cout << wyszukiwanie_liniowe_z_wart(tt, SIZE, k_not_exist_in_tt) << std::endl;
+    std::cout << wyszukiwanie_liniowe_z_wart(tt, SIZE, k_istnieje_w_tt) << std::endl;
+    std::cout << wyszukiwanie_liniowe_z_wart(tt, SIZE, k_nie_istnieje_w_tt) << std::endl;
 
-    std::cout << wyszukiwanie_interpolacyjne(tt, SIZE, k_exist_in_tt) << std::endl;
-    std::cout << wyszukiwanie_interpolacyjne(tt, SIZE, k_not_exist_in_tt) << std::endl;
+    std::cout << wyszukiwanie_interpolacyjne(tt, SIZE, k_istnieje_w_tt) << std::endl;
+    std::cout << wyszukiwanie_interpolacyjne(tt, SIZE, k_nie_istnieje_w_tt) << std::endl;
 
-    std::cout << wyszukiwanie_skokowe(tt, SIZE, k_exist_in_tt) << std::endl;
-    std::cout << wyszukiwanie_skokowe(tt, SIZE, k_not_exist_in_tt) << std::endl;
+    std::cout << wyszukiwanie_skokowe(tt, SIZE, k_istnieje_w_tt) << std::endl;
+    std::cout << wyszukiwanie_skokowe(tt, SIZE, k_nie_istnieje_w_tt) << std::endl;
 
     return 0;
 }
