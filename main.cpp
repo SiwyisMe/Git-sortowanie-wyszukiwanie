@@ -1,9 +1,11 @@
 #include <iostream>
 #include "algorytmy.hpp"
+#include <ctime>
 
-const int SIZE = 10;  // rozmiar tablicy
+const int SIZE = 10; // rozmiar tablicy
 
 int main() {
+    std::srand(std::time(0));
     int t[SIZE];
     wypelnij_tablice(t, SIZE);
     wydrukuj_tablice(t, SIZE);
@@ -31,8 +33,8 @@ int main() {
     wydrukuj_tablice(t, SIZE);
 
     int tt[SIZE] = {};
-    int k_istnieje_w_tt = 42;  // liczba jaka chce
-    int k_nie_istnieje_w_tt = 99;  // liczba jaka chce
+    int k_istnieje_w_tt = 1;  // liczba jaka chce
+    int k_nie_istnieje_w_tt = 1; // liczba jaka chce
 
     std::cout << wyszukiwanie_binarne(tt, SIZE, k_istnieje_w_tt) << std::endl;
     std::cout << wyszukiwanie_binarne(tt, SIZE, k_nie_istnieje_w_tt) << std::endl;

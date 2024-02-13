@@ -25,39 +25,43 @@ void sortowanie_babelkowe(int t[], int size) {
 }
 
 void sortowanie_przez_scalanie(int t[], int size) {
-  if(size <= 1) return;
-  
-  int mid = size / 2;
-  int left[mid];
-  int right[size - mid];
+  if (size <= 1) return;
 
-  for(int i = 0; i < mid; i++) {
+  int mid = size / 2;
+
+  int* left = new int[mid];
+  int* right = new int[size - mid];
+
+  for (int i = 0; i < mid; i++) {
     left[i] = t[i];
   }
-  for(int i = mid; i < size; i++) {
-    right[i - mid] = t[i]; 
+  for (int i = mid; i < size; i++) {
+    right[i - mid] = t[i];
   }
 
   sortowanie_przez_scalanie(left, mid);
   sortowanie_przez_scalanie(right, size - mid);
 
   int i = 0, j = 0, k = 0;
-  while(i < mid && j < size - mid) {
-    if(left[i] <= right[j]) {
+  while (i < mid && j < (size - mid)) {
+    if (left[i] <= right[j]) {
       t[k++] = left[i++];
-    }
-    else {
+    } else {
       t[k++] = right[j++];
     }
   }
 
-  while(i < mid) {
+  while (i < mid) {
     t[k++] = left[i++];
   }
-  while(j < size - mid) {
+  while (j < (size - mid)) {
     t[k++] = right[j++];
   }
+
+  delete[] left;
+  delete[] right;
 }
+
 
 void sortowanie_szybkie(int t[], int size) {
   if(size <= 1) return;
